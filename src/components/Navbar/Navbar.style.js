@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
+import { VscAccount } from 'react-icons/vsc'
 
 export const NavbarContainer = styled.nav`
   width: 100%;
@@ -9,6 +10,9 @@ export const NavbarContainer = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  @media screen and (max-width: 960px) {
+    background-color: #fff;
+  }
 `
 export const NavbarWrapper = styled(Container)`
   height: 100%;
@@ -35,10 +39,12 @@ export const MenuContainer = styled.ul`
   text-align: center;
   align-items: center;
   list-style: none;
+  margin-right: 60px;
 
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
     width: 100%;
     height: 90vh;
     position: absolute;
@@ -62,9 +68,15 @@ export const MobileIcon = styled.div`
 export const MenuItem = styled.li`
   padding: 0.5rem 1rem;
   height: 80px;
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover{
+    border-bottom: 2px solid #002c5f;
+  }
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -76,7 +88,19 @@ export const MenuLink = styled(Link)`
   text-decoration: none;
   height: 100%;
   display: flex;
-  color: #002C5F;
+  color: #444;
+  font-size: 18px;
   justify-content: center;
   align-items: center;
 `;
+
+export const SearchIconContainer = styled.div`
+  text-align: center;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+`;
+
+export const SearchIcon = styled(VscAccount)`
+  font-size: 30px;
+`

@@ -1,7 +1,7 @@
 import {React, useState}from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { NavbarContainer, NavbarWrapper, LogoContainer, Logo, MenuContainer, MenuItem, MenuLink, MobileIcon } from './Navbar.style';
+import { NavbarContainer, NavbarWrapper, LogoContainer, Logo, MenuContainer, MenuItem, MenuLink, MobileIcon, SearchIconContainer, SearchIcon } from './Navbar.style';
 
 const Navbar = () => {
   const [isClick, setIsClick] = useState(false);
@@ -21,30 +21,23 @@ const Navbar = () => {
           <MenuContainer isClick={isClick}>
             <MenuItem>
               <MenuLink to='/'>
-                승용
+                IONIQ 5
               </MenuLink>
             </MenuItem>
             <MenuItem>
               <MenuLink to='/'>
-                SUV
+                IONIQ 6
               </MenuLink>
             </MenuItem>
             <MenuItem>
               <MenuLink to='/'>
-                수소/전기차
-              </MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to='/'>
-                N/N Line
-              </MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to='/'>
-                소형상용&택시
+                NEXO
               </MenuLink>
             </MenuItem>
           </MenuContainer>
+          <SearchIconContainer>
+            <SearchIcon />
+          </SearchIconContainer>
         </NavbarWrapper>
       </NavbarContainer>
     </IconContext.Provider>
